@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+RewriteRule ^contact$ contact.php [L]
+RewriteRule ^faq$ faq.php [L]
+
+ErrorDocument 404 /404.php
+RewriteRule ^404.php$ 404.php [L]

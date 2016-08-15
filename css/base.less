@@ -1,0 +1,137 @@
+@import "variables.less";
+@import "mixins.less";
+@import "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css";
+
+// General
+body 
+{
+	background-color: @color_bg;
+	color: @color_primary;
+	font-family: @font_primary;
+	text-align: center;
+}
+
+h1
+{
+	font-size: 15px;
+}
+
+h2
+{
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+small
+{
+	font-size: 10px;
+}
+
+strong
+{
+	font-weight: bold;
+}
+
+em
+{
+	font-style: italic;
+}
+
+a 
+{
+	color: @color_highlight;
+	text-decoration: none;
+	transition: all .3s;
+	
+	&:hover
+	{
+		color: @color_primary;
+	}
+}
+
+@import "header.less";
+
+@import "intro.less";
+
+section#content
+{
+	min-height: 600px;
+	section
+	{
+		box-sizing: border-box;
+		padding: 20px 10px;
+	}
+
+	@import "services.less";
+	
+	@import "pricing.less";
+	
+	@import "additional.less";
+	
+	@import "detail.less";
+} // section#content
+
+section#bottom
+{
+	a.cta
+	{
+		background: @color_offlight;
+		border-radius: 0;
+		display: block;
+		padding: 60px 0;
+		
+		&:hover
+		{
+			background: @color_highlight;
+		}
+	} // a.cta
+} // section#bottom
+
+@import "footer.less";
+
+// Classes
+
+div.container_center
+{
+	display: table;
+	height: 100%;
+	width: 100%;
+	
+	div.center_text
+	{
+		display: table-cell;
+		vertical-align: middle;
+	} // div.center_text
+} // div.container_center
+
+a.cta
+{
+	.cta();
+}
+
+// General Responsive
+
+@media(min-width:641px) {
+    h2
+	{
+		font-size: 48px;
+	}
+	
+	h1
+	{
+		font-size: 36px;
+	}
+	
+	a.cta
+	{
+		font-size: 24px;
+	}
+	
+	section#content
+	{
+		section
+		{
+			padding: 60px 0;
+		}
+	} // section#content
+}

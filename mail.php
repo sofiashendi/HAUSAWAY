@@ -1,0 +1,1 @@
+<?php mail('info@sofiashendi.com','Subject of the e-mail','This is the body of the e-mail!', 'info@hausaway.com'); ?>
